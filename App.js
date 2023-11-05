@@ -1,20 +1,55 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// In App.js in a new project
 
-export default function App() {
+import * as React from 'react';
+import { NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import Home from './screens/Home';
+import EditProfile from './screens/EditProfile';
+
+
+const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
+
+function MainDrawer() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Drawer.Navigator 
+    initialRouteName="Home" 
+    screenOptions={({ route }) => ({
+      drawerActiveBackgroundColor: '#FAA70A',
+      drawerActiveTintColor : '#FAF8ED',
+    })}>
+      <Drawer.Screen name="Home" component={Home}/>
+      <Drawer.Screen name="EditProfile" component={EditProfile} />
+    </Drawer.Navigator>
+  )
+}
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+        name='MainDrawer'
+        component={MainDrawer}
+        options={{ headerShown: false
+        }
+
+        }
+        
+        />
+        <Stack.Screen 
+        name="Edit Profile" 
+        component={EditProfile}
+        options={{
+          headerStyle:{
+            backgroundColor: '#FAF8ED'
+          }
+        }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+export default App;
