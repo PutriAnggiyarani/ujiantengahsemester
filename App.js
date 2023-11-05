@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from './screens/Home';
 import EditProfile from './screens/EditProfile';
+import SignUp from './screens/SignUp'
 
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,7 @@ function MainDrawer() {
     })}>
       <Drawer.Screen name="Home" component={Home}/>
       <Drawer.Screen name="EditProfile" component={EditProfile} />
+      <Drawer.Screen name="SignUp" component={SignUp} />
     </Drawer.Navigator>
   )
 }
@@ -32,7 +34,8 @@ function App() {
         <Stack.Screen 
         name='MainDrawer'
         component={MainDrawer}
-        options={{ headerShown: false
+        options={{ headerShown: false,
+          backgroundColor: '#FAF8ED'
         }
 
         }
@@ -46,6 +49,15 @@ function App() {
             backgroundColor: '#FAF8ED'
           }
         }} />
+
+        <Stack.Screen 
+        name="Sign Up" 
+        component={SignUp}
+        options={{
+          headerShown: false
+          
+        }} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

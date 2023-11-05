@@ -1,7 +1,5 @@
 import React from "react";
 import { NativeBaseProvider, Center, Heading, Box, Container, FormControl, Item, Input, Button, Text, ScrollView } from "native-base";
-// import { ScrollView } from "react-native-gesture-handler";
-// import { useNavigation } from "@react-navigation/native";
 
 // const navigation= useNavigation()
 const EditProfile = () => {
@@ -29,24 +27,27 @@ const EditProfile = () => {
           <Box flex={6} bg='#FAA70A'  borderTopRadius={80}>
             <Box>
               <FormControl p={34} >
-                <FormControl.Label>Email ID</FormControl.Label>
-                <Input bg={"white"} />
+                <FormControl.Label>Name</FormControl.Label>
+                <Input bg={"white"} borderRadius={15}/>
               </FormControl>
               <FormControl paddingTop={1} p={30} >
                 <FormControl.Label>Email ID</FormControl.Label>
-                <Input bg={"white"} />
+                <Input bg={"white"} borderRadius={15} />
               </FormControl>
               <FormControl paddingTop={1} p={30} >
-                <FormControl.Label>Email ID</FormControl.Label>
-                <Input bg={"white"} />
+                <FormControl.Label>Enter Old Password</FormControl.Label>
+                <Input bg={"white"} borderRadius={15} />
               </FormControl>
               <FormControl paddingTop={1} p={30} >
-                <FormControl.Label>Email ID</FormControl.Label>
-                <Input bg={"white"} />
+                <FormControl.Label>Create New Password</FormControl.Label>
+                <Input 
+                bg={"white"}
+                borderRadius={15}
+                 />
               </FormControl>
             </Box>
             <Box alignItems="center" p={30} borderRadius={15} >
-              <Button bg='#FAF8ED' >
+              <Button bg='#FAF8ED' borderRadius={15} >
                 <Text color='#FAA70A'>Update Profile</Text></Button>
             </Box>
           </Box>
