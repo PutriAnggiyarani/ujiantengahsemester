@@ -49,7 +49,7 @@ const Login = () => {
         </FormControl>
         <Box alignItems="center" p={30} borderRadius={15} >
             <Button bg='#FAF8ED' borderRadius={15} >
-                <Text color='#FAA70A' fontSize={20}>Login</Text>
+                <Text color='#FAA70A' fontSize={17}>Login</Text>
             </Button>
         </Box>
       </Box>

@@ -62,7 +62,7 @@ const SignUp = () => {
         </FormControl>
         <Box alignItems="center" p={30} borderRadius={15} >
             <Button bg='#FAF8ED' borderRadius={15} >
-                <Text color='#FAA70A' fontSize={20}>Sign Up</Text>
+                <Text color='#FAA70A' fontSize={17}>Sign Up</Text>
             </Button>
         </Box>
       </Box>

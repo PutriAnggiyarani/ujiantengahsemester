@@ -24,15 +24,15 @@ const EditProfile = () => {
             </Center>
         
           </Box>
-          <Box flex={10} bg='#FAA70A'  borderTopRadius={80}>
+          <Box flex={2} bg='#FAA70A'  borderTopRadius={80}>
             <Box>
-              <FormControl p={34} >
+              <FormControl p={30} >
                 <FormControl.Label>Name</FormControl.Label>
-                <Input bg={"white"} borderRadius={15}/>
+                <Input bg={"white"} borderRadius={15} value="Putri Anggiyarani"/>
               </FormControl>
               <FormControl paddingTop={1} p={30} >
                 <FormControl.Label>Email ID</FormControl.Label>
-                <Input bg={"white"} borderRadius={15} />
+                <Input bg={"white"} borderRadius={15} value="putrianggiyarani@gmail.com"/>
               </FormControl>
               <FormControl paddingTop={1} p={30} >
                 <FormControl.Label>Enter Old Password</FormControl.Label>
@@ -46,7 +46,7 @@ const EditProfile = () => {
                  />
               </FormControl>
             </Box>
-            <Box alignItems="center" p={30} borderRadius={15} >
+            <Box alignItems="center" p={38} >
               <Button bg='#FAF8ED' borderRadius={15} >
                 <Text color='#FAA70A'>Update Profile</Text></Button>
             </Box>
