@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import { Box, Heading, Input, Button, Text, FormControl, NativeBaseProvider } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 
-const SignUp = () => {
+const Login = () => {
 
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = () => {
     // Di sini, Anda dapat menambahkan logika untuk menangani data yang dimasukkan oleh pengguna
-    console.log('Name:', name);
     console.log('Email:', email);
     console.log('Password:', password);
   };
@@ -24,22 +22,11 @@ const SignUp = () => {
         paddingBottom={50}
         color= "#FAF8ED"
         fontSize="33"
-        >Sign Up</Heading>
-        <FormControl p={10} paddingBottom={0.10}>
-          <FormControl.Label>Name</FormControl.Label>
-          <Input
-            placeholder="Enter Username"
-            value={name}
-            onChangeText={(text) => setName(text)}
-            mb={2}
-            bgColor='#FAF8ED'
-            borderRadius={15}
-          />
-        </FormControl>
+        >Login</Heading>
         <FormControl p={10} paddingBottom={0.10}>
           <FormControl.Label>Email</FormControl.Label>
           <Input
-            placeholder="Enter Email"
+            placeholder="Email"
             value={email}
             onChangeText={(text) => setEmail(text)}
             mb={2}
@@ -48,9 +35,9 @@ const SignUp = () => {
           />
         </FormControl>
         <FormControl p={10}>
-          <FormControl.Label>Password</FormControl.Label>
+          <FormControl.Label>Kata Sandi</FormControl.Label>
           <Input
-            placeholder="Enter Password"
+            placeholder="Kata Sandi"
             value={password}
             onChangeText={(text) => setPassword(text)}
             secureText
@@ -58,11 +45,11 @@ const SignUp = () => {
             bgColor='#FAF8ED'
             borderRadius={15}
           />
-          <Text mt={2} >Already have an account?<Text color="blue.500" onPress={()=> navigation.navigate('Login')}>Login</Text></Text>
+          <Text mt={2} >Don't have an account ?<Text color="blue.500" onPress={()=> navigation.navigate('Sign Up')}> Sign Up Here</Text></Text>
         </FormControl>
         <Box alignItems="center" p={30} borderRadius={15} >
             <Button bg='#FAF8ED' borderRadius={15} >
-                <Text color='#FAA70A' fontSize={20}>Sign Up</Text>
+                <Text color='#FAA70A' fontSize={20}>Login</Text>
             </Button>
         </Box>
       </Box>
@@ -70,4 +57,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;

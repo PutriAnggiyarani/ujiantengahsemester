@@ -24,7 +24,7 @@ const EditProfile = () => {
             </Center>
         
           </Box>
-          <Box flex={6} bg='#FAA70A'  borderTopRadius={80}>
+          <Box flex={10} bg='#FAA70A'  borderTopRadius={80}>
             <Box>
               <FormControl p={34} >
                 <FormControl.Label>Name</FormControl.Label>

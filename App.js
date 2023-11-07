@@ -1,12 +1,10 @@
-// In App.js in a new project
-
 import * as React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Home from './screens/Home';
 import EditProfile from './screens/EditProfile';
-import SignUp from './screens/SignUp'
+import SignUp from './screens/SignUp';
+import Login from './screens/Login';
 
 
 const Stack = createNativeStackNavigator();
@@ -15,14 +13,14 @@ const Drawer = createDrawerNavigator();
 function MainDrawer() {
   return (
     <Drawer.Navigator 
-    initialRouteName="Home" 
+    initialRouteName="Login" 
     screenOptions={({ route }) => ({
       drawerActiveBackgroundColor: '#FAA70A',
       drawerActiveTintColor : '#FAF8ED',
     })}>
-      <Drawer.Screen name="Home" component={Home}/>
-      <Drawer.Screen name="EditProfile" component={EditProfile} />
-      <Drawer.Screen name="SignUp" component={SignUp} />
+      <Drawer.Screen name="Login" component={Login} />
+      <Drawer.Screen name="Sign Up" component={SignUp} />
+      <Drawer.Screen name="Edit Profile" component={EditProfile} />
     </Drawer.Navigator>
   )
 }
@@ -41,22 +39,6 @@ function App() {
         }
         
         />
-        <Stack.Screen 
-        name="Edit Profile" 
-        component={EditProfile}
-        options={{
-          headerStyle:{
-            backgroundColor: '#FAF8ED'
-          }
-        }} />
-
-        <Stack.Screen 
-        name="Sign Up" 
-        component={SignUp}
-        options={{
-          headerShown: false
-          
-        }} />
 
       </Stack.Navigator>
     </NavigationContainer>
