@@ -5,6 +5,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import EditProfile from './screens/EditProfile';
 import SignUp from './screens/SignUp';
 import Login from './screens/Login';
+import ListRestaurant from './screens/ListRestaurant';
 
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,7 @@ function MainDrawer() {
       <Drawer.Screen name="Login" component={Login} />
       <Drawer.Screen name="Sign Up" component={SignUp} />
       <Drawer.Screen name="Edit Profile" component={EditProfile} />
+      <Drawer.Screen name="List Restaurant" component={ListRestaurant} />
     </Drawer.Navigator>
   )
 }
@@ -34,12 +36,8 @@ function App() {
         component={MainDrawer}
         options={{ headerShown: false,
           backgroundColor: '#FAF8ED'
-        }
-
-        }
-        
+        }}   
         />
-
       </Stack.Navigator>
     </NavigationContainer>
   );
