@@ -19,7 +19,7 @@ function MainDrawer() {
       drawerActiveBackgroundColor: '#FAA70A',
       drawerActiveTintColor : '#FAF8ED',
     })}>
-      <Drawer.Screen name="Login" component={Login} />
+      <Drawer.Screen name="Login" component={Login} optio/>
       <Drawer.Screen name="Sign Up" component={SignUp} />
       <Drawer.Screen name="Edit Profile" component={EditProfile} />
       <Drawer.Screen name="List Restaurant" component={ListRestaurant} />

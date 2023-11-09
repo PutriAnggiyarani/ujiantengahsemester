@@ -9,8 +9,6 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
 
   const handleSubmit = () => {
-    // Di sini, Anda dapat menambahkan logika untuk menangani data yang dimasukkan oleh pengguna
-    console.log('Name:', name);
     console.log('Email:', email);
     console.log('Password:', password);
   };

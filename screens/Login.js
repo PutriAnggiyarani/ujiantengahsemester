@@ -8,7 +8,6 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const handleSubmit = () => {
-    // Di sini, Anda dapat menambahkan logika untuk menangani data yang dimasukkan oleh pengguna
     console.log('Email:', email);
     console.log('Password:', password);
   };
